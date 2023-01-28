@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belanja Online</title>
+
+    <!-- bootstrap 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- css animasi -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- css sweetalert -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Lobster&display=swap" rel="stylesheet">
+
+<style type="text/css">
+  body {
+    background-color: #eff0f2;
+    font-family: 'Poppins',sans-serif;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/email-pattern.png');
+    margin-bottom: 20px;
+  }
+  /*header*/
+  .header {
+    animation: slideInDown;
+    animation-duration: 1s;
+    padding: 7px 7px 3px 7px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eff0f2;
+    position: fixed;
+    z-index: 1;
+  }
+  .header h3{
+    font-family: 'league Spartan',sans-serif;
+    color: #000;
+    font-size: 5vmin;
+    font-weight: bold;
+  }
+  .pesan lottie-player {
+    border: 1px solid #1db9ab;
+    border-radius: 3px;
+    margin-left: 7px;
+    animation: bounce;
+    animation-duration: 2s;
+    width: 5vmin;
+    height: 5vmin;
+  }
+  /*end header*/
+  
+  /*saldo*/
+  .viewsaldo {
+    padding-top: 50px;
+  }
+  .boxsaldo {
+    animation: slideInDown;
+    animation-duration: 1s;
+    align-items: center;
+    border : 1px solid #fff;
+    border-radius: 10px;
+    width: 98%;
+    margin: auto;
+    padding: 7px 7px 0px 7px;
+    background-color: #510051;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png');
+    background-size: cover;
+  }
+  .saldo p {
+    font-size: 3.5vmin;
+    color: #fff;
+  }
+  .saldo h2 {
+    font-family: 'league Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 4.5vmin;
+    margin-top: -7px;
+    margin-bottom: -1px;
+    color: #fff;
+  }
+  .topup {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+  .topup a {
+    text-decoration: none;
+  }
+        .tombol {
+        border-radius: 20px;
+        width: 90px;
+        padding: 3px;
+        border: 1px solid #fff;
+        text-align: center;
+        color: #fff;
+        font-size: 3vmin;
+      }
+      
+      .tombol:hover {
+        background-color: #ff9100;
+      }
+  .topup p{
+    font-size: 3vmin;
+    color: #fff;
+  }
+  /*end saldo*/
+
+
+  /*baner*/
+  .baner {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .cs24jam {
+    background-color: #fec629;
+    border-radius: 2px;
+   }
+   .animasi {
+    margin-bottom: -2%;
+   }
+   .text {
+     margin-top: 7%; font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+   }
+   .text h4 {
+     font-size: 3.5vmin; color: #fff;text-shadow: 2px 1px #000;
+   }
+   .text h3 {
+     font-size: 5vmin; color: #fff61c; text-shadow: 2px 1px #000;
+   }
+  .boxtimer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1px;
+  }
+  .boxtimer h4 {
+    font-size: 3.5vmin;
+    margin-bottom: 1px;
+    font-family: italic;
+  }
+  .tanggal {
+    display: flex;
+  }
+  .tanggal h4 {
+    margin-left: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vmin;
+    font-weight: bold;
+  }
+  .time {
+    display: flex;
+    text-align: center;
+  }
+  .time .card {
+    padding: 1px 2px 0px 2px;
+    width: 7vmin;
+    background-color: #FFF;
+  }
+  .time h4 {
+    font-size: 3.5vmin;
+    margin-bottom: 1px;
+    color: #000;
+    font-weight: bold;
+    font-family: italic;
+    margin-top: 2px;
+  }
+
+    /*end baner*/
+
+  /*menu transaksi*/
+  .trans {
+    animation: slideInUp;
+    animation-duration: 1.5s;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .trans h6 {
+    font-weight: bold;
+    font-size: 3vmin;
+    color: #000;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 5vmin;
+  }
+  .menu a {
+    width: 20vmin;
+    text-decoration: none;
+    color: #000;
+  }
+  .menu img {
+    width: 7vmin;
+    border-radius: 10px;
+  }
+  .menu p {
+    font-size: 2.4vmin;
+    margin-top: 2vmin;
+  }
+
+  /*hny*/
+  .cover {    
+        height: 30%;
+        text-align: center;
+        padding: 20px 0px 30px 0px;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      .cover h1 {
+        color: #000;
+        font-family: 'Lobster', cursive;
+        opacity: 0.8;
+      }
+      .countdown {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+      }
+      .newyear {
+        display: none;
+        margin-top: 10px;
+      }
+      .newyear img {
+        width: 100%;
+        animation: fadeInDown;
+        animation-duration: 1s;
+        border-radius: 10px;
+      }
+</style>
+
+  </head>
+
+
+  <body>
+    <!-- header -->
+    <div class="container-fluid header">
+      <h3>Belanja Online</h3>
+
+<div class="pesan" style="display: flex;">
+<a href="https://bejojoyo.bukaolshop.site/akun/?page=chat"> 
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_hjmgkfru.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+</a>
+
+<a href="https://bejojoyo.bukaolshop.site/akun/?page=notifikasi">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets3.lottiefiles.com/packages/lf20_q70pch25.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+</a>
+</div>
+
+    </div>
+    <!-- end header -->
+
+    <!-- saldo -->
+    <div class="container-fluid viewsaldo">
+      <div class="boxsaldo">
+
+        <div class="label" style="display: flex;">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_8JqYfK.json"  background="transparent"  speed="1"  style="width: 4vmin; height: 4vmin;"  loop  autoplay></lottie-player>
+<p style="color: #fff; font-size: 3vmin;">Saldo</p>
+        </div>
+
+        <div class="tSaldo" style="display: flex; justify-content: space-between; margin-top: -15px; align-items: baseline;">
+          <h4 id="saldo_user" style="color: #fff; font-family: 'league Spartan', sans-serif; font-size: 4vmin;">{{saldo_user}}</h4>
+          
+          <a href="https://bejojoyo.bukaolshop.site/akun/?page=topup" style="text-decoration: none;">
+          <div class="bsaldo" style="font-size: 2vmin;padding: 3px; display: flex; border-radius: 7px; border: 2px solid #fff; background-color: #fec629; align-items: flex-start;">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_4b8xfsqj.json"  background="transparent"  speed="1"  style="width: 4vmin; height: 4vmin;"  loop  autoplay></lottie-player>
+<h6 style="color: #545454; font-size: 3.5vmin; margin-left: 3px; margin-bottom: -5px;">Isi saldo</h6>
+</div>
+</a>
+        </div>
+      
+      
+    </div>
+    </div>
+    <!-- end saldo -->
+
+
+    <!-- baner -->
+    <div class="container baner">
+      <div class="card">
+
+        <div class="container cs24jam">
+
+          <div class="row" style="margin-bottom: -9%;">
+            <div class="col-4" style="padding: 1px;">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_qvo0sgqo.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%; margin-top: -15%;"  loop  autoplay></lottie-player>
+            </div> 
+            <div class="col-8">
+              <div class="row">
+                <h4 style="font-size: 4vmin; color: #fff; font-weight: bold; margin-top: 10px; text-shadow: 2px 1px #000;">Customer Service Online</h4>
+              </div>
+              <div class="row">
+                <div class="col-5">
+                  <h4 style="font-size: 4vmin; font-weight: bold;">24 Jam</h4>
+                </div>
+                <div class="col-7" style="padding-bottom: 1px;">
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_p5yomfw6.json"  background="transparent"  speed="1"  style="width: 80%; height: 80%; float: right;"  loop  autoplay></lottie-player>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card-body boxtimer">
+
+          <div class="tanggal">
+          <h4 id="hari"></h4>
+          <h4 id="tgl"></h4>
+          <h4 id="bulan"></h4>
+          <h4 id="tahun"></h4>
+          </div>
+
+          <div class="time">
+  
+            <div class="card hari">
+              <h4 id="jam">00</h4>
+            </div>
+             :
+            <div class="card hari">
+              <h4 id="menit">00</h4>
+            </div>
+             :
+            <div class="card hari">
+              <h4 id="detik">00</h4>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+      <!-- end baner -->
+
+
+    <!--menu transaksi-->
+    <div class="container-fluid">
+
+      <div class="container trans">
+        <h6>Top Up & Bayar Tagihan</h6>
+
+        
+<div class="menu">
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/176472">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/2586/2586488.png" class="img-fluid">
+  <p>Pulsa & Data</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/140733">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/3706/3706164.png" class="img-fluid">
+  <p>Telp & SMS</p>
+  </div>
+  </a>
+
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/162113">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/542/542750.png" class="img-fluid">
+  <p>PLN</p>
+  </div>
+  </a>
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/134732">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/4474/4474763.png" class="img-fluid">
+  <p>BPJS</p>
+  </div>
+  </a>
+
+  <a href="#">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/4854/4854246.png" class="img-fluid">
+  <p>Game</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/167863">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/3258/3258446.png" class="img-fluid">
+  <p>E-Wallet</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/146057">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/311/311660.png" class="img-fluid">
+  <p>TV Kabel</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/173595">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/2830/2830289.png" class="img-fluid">
+  <p>Bank</p>
+  </div>
+  </a>
+
+</div>
+<!--end menu transaksi-->
+      </div>
+      
+    </div>
+
+    <!--menu transaksi-->
+    <div class="container-fluid">
+
+      <div class="container trans">
+        <h6>Top up Game</h6>
+
+        
+<div class="menu">
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/149965">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghfMe6OPVTHpbzUNMqwg9KJlnNyWnn-MMUevCItWV4LDHjjzWDor9niZcY83NJYfEeFhq_3wKjxhVk38yTRy1DcAArWQjaN13cOCqVdZ7VPyYl5tJBVeG_NPM8LQwi56iBxPQWz5FwVGL0qmyzycYIRE0JR5j0oZODb7sBQn0yfaRBiSV4Qr27Jnnm/s320/ff.png" class="img-fluid">
+  <p>Free </p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/151015">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNCWig6GfKTRRl-ZLIfKHDDSi08-qOR5BrBVopZhWx2t3SVax3vCtMpbSobclZnS0I3q1acrZmxdD4AwRBdllkMrpRhd7Ntcf7xGVQP29NJBbg5u2lxmw5W555WW1PNpSJbCTOOF7msnckH-4ZEOr49-MUS21IREw4t78auDjxZRSVytM7x7cmXy9N/s320/ml.png" class="img-fluid">
+  <p>Mobile Legend</p>
+  </div>
+  </a>
+
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/150245">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh60_43ayHt1G2BiBrKLZxsvlphroy5ogxSJOitys-vRH2kActlpBAmIuZ8WhwDAleskKTz_Bfpw2F6zR5g_EyKxnX3yK4Sc9P-u7tH1iytsJ1rbD6tVBqP-o4zE7sMU02ze7bRwk8qOGHcNlPEukC5y22q50_pPjK72HFDtxdQIdc4P9mjtjwoGyk/s320/pubg.png" class="img-fluid">
+  <p>PUBG</p>
+  </div>
+  </a>
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/150442">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguTbesfjctwqtDztKUXbRlKpidpGagOptYGURqjBWY0ZHXeF1-Ho8wMfe-KHnNIj3zPptWil7WYNGFXL9rXYLFYFCxNnsrxgOpFk-hCEKUYafiJBpsMEQdXTU1Du8ayZ9qDXpQSVG2YYJXiE_OYkjDs3Lg3nlaVVZkPN3Rh5qKSdYyZVciBG2pNkXQ/s320/aov.png" class="img-fluid">
+  <p>AOV</p>
+  </div>
+  </a>
+
+</div>
+<!--end menu transaksi-->
+      </div>
+      
+    </div>
+
+  
+   <!--menu transaksi-->
+    <div class="container-fluid">
+
+      <div class="container trans">
+        <h6>Top up E-Wallet</h6>
+
+        
+<div class="menu">
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/134820">
+  <div>
+  <img src="https://i.ibb.co/Wpy8R2h/unnamed.png" class="img-fluid">
+  <p>ShopeePay</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/134827">
+  <div>
+  <img src="https://i.ibb.co/86Wdgq3/unnamed.png" class="img-fluid">
+  <p>Dana</p>
+  </div>
+  </a>
+
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/134832">
+  <div>
+  <img src="https://i.ibb.co/qkZCbrq/icon.png" class="img-fluid">
+  <p>Gopay</p>
+  </div>
+  </a>
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/142087">
+  <div>
+  <img src="https://i.ibb.co/4K3FTTP/unnamed-1.png" class="img-fluid">
+  <p>OVO</p>
+  </div>
+  </a>
+
+</div>
+<!--end menu transaksi-->
+      </div>
+      
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+    <script type="text/javascript">
+
+      const date = new Date().getDate();
+      const tgl = document.getElementById('tgl');
+
+      tgl.innerHTML = date;
+
+      const month = new Date().getMonth();
+      const bulan = document.getElementById('bulan');
+
+      if (month == 0) {
+        bulan.innerHTML = "Januari";
+      }else if (month == 1) {
+        bulan.innerHTML = "Februari";
+      }else if (month == 2) {
+        bulan.innerHTML = "Maret";
+      }else if (month == 3) {
+        bulan.innerHTML = "April";
+      }else if (month == 4) {
+        bulan.innerHTML = "Mei";
+      }else if (month == 5) {
+        bulan.innerHTML = "Juni";
+      }else if (month == 6) {
+        bulan.innerHTML = "Juli";
+      }else if (month == 7) {
+        bulan.innerHTML = "Agustus";
+      }else if (month == 8) {
+        bulan.innerHTML = "September";
+      }else if (month == 9) {
+        bulan.innerHTML = "Oktober";
+      }else if (month == 1) {
+        bulan.innerHTML = "November";
+      }else if (month == 1) {
+        bulan.innerHTML = "Desember";
+      }
+
+      const year = new Date().getFullYear();
+      const tahun = document.getElementById('tahun');
+
+      tahun.innerHTML = year;
+
+      const day = new Date().getDay();
+      const hari = document.getElementById('hari');
+      
+      if (day == 0) {
+        hari.innerHTML = "Minggu,";
+      }else if (day == 1) {
+        hari.innerHTML = "Senin,";
+      }else if (day == 2) {
+        hari.innerHTML = "Selasa,";
+      }else if (day == 3) {
+        hari.innerHTML = "Rabu,";
+      }else if (day == 4) {
+        hari.innerHTML = "Kamis,";
+      }else if (day == 5) {
+        hari.innerHTML = "Jum'at,";
+      }else if (day == 6) {
+        hari.innerHTML = "Saptu,";
+      }
+
+     setInterval(function () {
+      const jam = new Date(). getHours();
+      const menit = new Date(). getMinutes();
+      const detik = new Date(). getSeconds();
+      const tjam = document.getElementById('jam');
+      const tmenit =  document.getElementById('menit');
+      const tdetik =  document.getElementById('detik');
+      tjam.innerHTML = jam;
+      tmenit.innerHTML = menit;
+      tdetik.innerHTML = detik;
+
+      if (detik == 0) {
+        tdetik.innerHTML = "00";
+      }else if (detik == 1) {
+        tdetik.innerHTML = "01";
+      }else if (detik == 2) {
+        tdetik.innerHTML = "02";
+      }else if (detik == 3) {
+        tdetik.innerHTML = "03";
+      }else if (detik == 4) {
+        tdetik.innerHTML = "04";
+      }else if (detik == 5) {
+        tdetik.innerHTML = "05";
+      }else if (detik == 6) {
+        tdetik.innerHTML = "06";
+      }else if (detik == 7) {
+        tdetik.innerHTML = "07";
+      }else if (detik == 8) {
+        tdetik.innerHTML = "08";
+      }else if (detik == 9) {
+        tdetik.innerHTML = "09";
+      }
+
+            if (menit == 0) {
+        tmenit.innerHTML = "00";
+      }else if (menit == 1) {
+        tmenit.innerHTML = "01";
+      }else if (menit == 2) {
+        tmenit.innerHTML = "02";
+      }else if (menit == 3) {
+        tmenit.innerHTML = "03";
+      }else if (menit == 4) {
+        tmenit.innerHTML = "04";
+      }else if (menit == 5) {
+        tmenit.innerHTML = "05";
+      }else if (menit == 6) {
+        tmenit.innerHTML = "06";
+      }else if (menit == 7) {
+        tmenit.innerHTML = "07";
+      }else if (menit == 8) {
+        tmenit.innerHTML = "08";
+      }else if (menit == 9) {
+        tmenit.innerHTML = "09";
+      }
+
+      if (jam == 0) {
+        tjam.innerHTML = "00";
+      }else if (jam == 1) {
+        tjam.innerHTML = "01";
+      }else if (jam == 2) {
+        tjam.innerHTML = "02";
+      }else if (jam == 3) {
+        tjam.innerHTML = "03";
+      }else if (jam == 4) {
+        tjam.innerHTML = "04";
+      }else if (jam == 5) {
+        tjam.innerHTML = "05";
+      }else if (jam == 6) {
+        tjam.innerHTML = "06";
+      }else if (jam == 7) {
+        tjam.innerHTML = "07";
+      }else if (jam == 8) {
+        tjam.innerHTML = "08";
+      }else if (jam == 9) {
+        tjam.innerHTML = "09";
+      }
+
+     },1000);
+      
+
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Rp"+ribuan;
+      }
+      document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+
+      function info() {
+        let info = document.getElementById('info');
+        swal("maaf, layanan ini masih dalam perbaikan.");
+      }
+
+    </script>
+
+  </body>
+</html>
