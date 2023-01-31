@@ -21,10 +21,26 @@
       background-color: #eff0f2;
       padding-bottom: 20px;
     }
+    /*navbar*/
+   .navbar {
+     display: flex;
+     justify-content: flex-end;
+     position: fixed;
+     background-color: #eff0f2;
+     z-index: 1;
+   }
+   .navbar a {
+    width: 10%;
+   }
+   .navbar img {
+    width: 70%;
+   }
+   /*end navbar*/
     .boxproduk {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      padding-top: 50px;
     }
     .boxproduk a {
      width: 48%;
@@ -88,7 +104,15 @@
   </head>
   <body>
 
-    <div class="container-fluid mt-3 boxproduk">
+    <nav class="navbar bg-light">
+     <a href="https://bejojoyo.bukaolshop.site/cart/">
+      <img src="https://cdn-icons-png.flaticon.com/512/3684/3684620.png">
+      </a>
+    </nav>
+   
+
+   <!-- List produk -->
+    <div class="container-fluid boxproduk">
       
       <a href="https://bejojoyo.bukaolshop.site/produk/bear-brand-susu-steril-189ml-1359360">
       <div class="card">
