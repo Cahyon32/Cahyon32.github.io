@@ -48,7 +48,6 @@
      width: 48%;
      text-decoration: none;
      margin-top: 10px;
-     display: none;
     }
      .card {
       padding: 10px 3px 0px 3px;
@@ -117,7 +116,7 @@
    <!-- List produk -->
     <div class="container-fluid boxproduk">
 
-      <!-- Laris -->
+      <!-- Lariso -->
 
       <a id="1333493" href="https://bejojoyo.bukaolshop.site/produk/nabati-wafer-coklat-46g-1333493">
       <div class="card">
@@ -589,6 +588,19 @@
         </div>
       </div>
       </a>
+
+      <a id="1688553" href="https://bejojoyo.bukaolshop.site/produk/ponds-pembersih-wajah-white-beauty-100g-1688553">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/88433387k.jpg">
+        <div class="card-body">
+        <h6>Ponds</h6>
+        <p class="ellipsis">Pembersih Wajah White Beauty</p>
+        <p class="gramasi">100g</p> 
+          <p class="harganormal">Rp36.300</p>
+          <h4 class="hargapromo">Rp24.900</h4>  
+        </div>
+      </div>
+      </a>
       <!-- end bejo -->
 
       <!-- promo 8 - 14 feruari 2023 -->
@@ -658,32 +670,6 @@
       </div>
       </a>
 
-      <a id="1695221" href="https://bejojoyo.bukaolshop.site/produk/ponds-facial-foam-pure-bright-100g-1695221">
-      <div class="card">
-        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/77210931.jpg">
-        <div class="card-body">
-        <h6>Ponds</h6>
-        <p class="ellipsis">Facial Foam Pure Bright</p>
-        <p class="gramasi">100g</p> 
-          <p class="harganormal">Rp39.300</p>
-          <h4 class="hargapromo">Rp24.900</h4>  
-        </div>
-      </div>
-      </a>
-
-      <a id="1688553" href="https://bejojoyo.bukaolshop.site/produk/ponds-pembersih-wajah-white-beauty-100g-1688553">
-      <div class="card">
-        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/88433387k.jpg">
-        <div class="card-body">
-        <h6>Ponds</h6>
-        <p class="ellipsis">Pembersih Wajah White Beauty</p>
-        <p class="gramasi">100g</p> 
-          <p class="harganormal">Rp36.300</p>
-          <h4 class="hargapromo">Rp24.900</h4>  
-        </div>
-      </div>
-      </a>
-
       <a id="1712870" href="https://bejojoyo.bukaolshop.site/produk/indomilk-susu-steril-honey-189ml-1712870">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/623561511h.jpg">
@@ -706,6 +692,21 @@
         <p class="gramasi">189ml</p> 
           <p class="harganormal">Rp9.400</p>
           <h4 class="hargapromo">Rp5.700</h4>  
+        </div>
+      </div>
+      </a>
+
+
+      <!-- item no dispay -->
+      <a id="1695221" href="https://bejojoyo.bukaolshop.site/produk/ponds-facial-foam-pure-bright-100g-1695221">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/77210931.jpg">
+        <div class="card-body">
+        <h6>Ponds</h6>
+        <p class="ellipsis">Facial Foam Pure Bright</p>
+        <p class="gramasi">100g</p> 
+          <p class="harganormal">Rp39.300</p>
+          <h4 class="hargapromo">Rp24.900</h4>  
         </div>
       </div>
       </a>
@@ -1280,30 +1281,39 @@
 
     <script type="text/javascript">
       let tgl = new Date().getDate();
+      let bulan = new Date().getMonth();
       
       let a = document.getElementsByTagName('a');
+      console.log(a);
       
-      // Larisso
-      if (tgl < 29) {
-        for(let i = 0; i < 13; i++) {
-        a[i].style.display ="block";
-      }
+      // larisso
+      for(i = 1; i <=12; i++){
+        if (tgl <=28 && bulan == 1) {
+          a[i].style.display = "block";
+        }else if (bulan == 2) {
+          a[i].style.display = "none";
+        }
       }
       // end larisso
       
       // bejo
-      for(let i = 13; i < 37; i++) {
+      for (i = 13; i <= 37; i++){
         a[i].style.display = "block";
       }
       // end bejo
-
-      // promo 8 - 14 februari 2023
-      if (tgl < 15) {
-        for(let i = 37; i < 46; i++) {
-        a[i].style.display ="block";
+      
+      // promo 8 sampai 15 februari
+      for(i = 38; i <= 44; i++){
+        if (tgl <= 15 && bulan == 1) {
+          a[i].style.display = "block";
+        }else if (tgl >=15 ) {
+          a[i].style.display = "none";
+        }
       }
-      }
 
+      for(i = 45; i <= 100; i++){
+        a[i].style.display = "none";
+      }    
     </script>
   </body>
 </html>
