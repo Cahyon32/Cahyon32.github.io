@@ -27,18 +27,17 @@
      padding: 8px 10px 8px 10px;
      justify-content: flex-end;
    }
-   .navbar a {
-    width: 10%;
+   .header {
+    background-color: #eff0f2;
+    padding-bottom: 10px;
    }
-   .navbar img {
-    width: 70%;
-   }
+
    /*end navbar*/
     .boxproduk {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding-top: 12%;
+      padding-top: 40%;
     }
     .boxproduk a {
      width: 48%;
@@ -98,28 +97,198 @@
       font-family: 'League Spartan', sans-serif;
      }
 
-     .larisso {
-      display: none;
-     }
    </style>
 
   </head>
   <body>
 
-    <nav class="z-1 navbar bg-light fixed-top">
-          <a href="https://bejojoyo.bukaolshop.site/cart/">
-          <img src="https://cdn-icons-png.flaticon.com/512/3684/3684620.png">
-          </a>   
-    </nav>
+    <div class="container-fluid header fixed-top" style="width: 100%;">
+      <img src="https://i.ibb.co/crkSdDb/Desain-tanpa-judul-2-removebg-preview.png" alt="..." width="60%">
+      <a href="https://bejojoyo.bukaolshop.site/cart/" class="basket mt-2 p-1 bg-black bg-gradient text-white rounded" style="display: flex; align-items: center;
+  justify-content: center; text-decoration: none;">
+  <img src="https://i.ibb.co/p6qW1Zk/bag.png" alt="bag" style="width: 5vmin;">
+  <div style="font-size: 3vmin; font-family: 'Poppins',sans-serif;">({{total_cart}})Item</div>
+</a>
+      <nav class="navbar mt-2 p-1 navbar-expand-lg rounded bg-gradient" style="background-color: #1db9ab; font-family: 'League Spartan', sans-serif;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Kategori</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a id="snack" onclick="snack()" class="nav-link" aria-current="page">Snack & Candy</a>
+        </li>
+        <li class="nav-item">
+          <a id="beverage" onclick="beverage()" class="nav-link">Beverage</a>
+        </li>
+        <li class="nav-item">
+          <a id="personal" onclick="personal()" class="nav-link">Personal Care</a>
+        </li>
+        <li class="nav-item">
+          <a id="cooking" onclick="cooking()" class="nav-link">Cooking Fair</a>
+        </li>
+        <li class="nav-item">
+          <a id="Homecare" onclick="homecare()" class="nav-link">Homecare</a>
+        </li>
+        <li class="nav-item">
+          <a id="noodle" onclick="noodle()" class="nav-link">Mie Instant</a>
+        </li>
+        <li class="nav-item">
+          <a id="lebaran" onclick="semua()" class="nav-link">Semua Produk</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </div>
    
 
    <!-- List produk -->
     <div class="container-fluid boxproduk">
 
+      <!-- alfamart -->
+
+      <!-- promo tanggal 24 - 26 februari 2022 -->
+
+      <a class="alfa 2426 personal" href="https://bejojoyo.bukaolshop.site/produk/sensodyne-pasta-gigi-fresh-mint-100g-1698376">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/88287574.jpg">
+        <div class="card-body">
+        <h6>Sensodyne</h6>
+        <p class="ellipsis">Pasta Gigi Fresh Mint</p>
+        <p class="gramasi">100G</p> 
+          <p class="harganormal">Rp36.100</p>
+          <h4 class="hargapromo">Rp27.400</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 personal" href="https://bejojoyo.bukaolshop.site/produk/sensodyne-pasta-gigi-deep-clean-100g-1695380">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/88935630.jpg">
+        <div class="card-body">
+        <h6>Sensodyne</h6>
+        <p class="ellipsis">Pasta Gigi Deep Clean</p>
+        <p class="gramasi">100G</p> 
+          <p class="harganormal">Rp36.100</p>
+          <h4 class="hargapromo">Rp27.400</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 personal" href="https://bejojoyo.bukaolshop.site/produk/sensodyne-pasta-gigi-herbal-100g-1696452">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/65220309.jpg">
+        <div class="card-body">
+        <h6>Sensodyne</h6>
+        <p class="ellipsis">Pasta Gigi Herbal</p>
+        <p class="gramasi">100G</p> 
+          <p class="harganormal">Rp36.100</p>
+          <h4 class="hargapromo">Rp27.400</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 personal" href="https://bejojoyo.bukaolshop.site/produk/sensodyne-pasta-gigi-cool-gel-100g-1698341">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/47194290.jpg">
+        <div class="card-body">
+        <h6>Sensodyne</h6>
+        <p class="ellipsis">Pasta Gigi Cool Gel</p>
+        <p class="gramasi">100G</p> 
+          <p class="harganormal">Rp36.100</p>
+          <h4 class="hargapromo">Rp27.400</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 personal" href="https://bejojoyo.bukaolshop.site/produk/ponds-facial-foam-pure-bright-100g-1695221">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/77210931.jpg">
+        <div class="card-body">
+        <h6>Ponds</h6>
+        <p class="ellipsis">Facial Foam Pure Bright</p>
+        <p class="gramasi">100g</p> 
+          <p class="harganormal">Rp39.300</p>
+          <h4 class="hargapromo">Rp24.900</h4>  
+        </div>
+      </div>
+      </a>
+
+
+      <a class="alfa 2426 cooking" href="https://bejojoyo.bukaolshop.site/produk/indomilk-kental-manis-putih-370g-1321058">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/141358096e.jpg">
+        <div class="card-body">
+        <h6>Indomilk</h6>
+        <p class="ellipsis">Kental Manis Putih</p>
+        <p class="gramasi">370g</p> 
+          <p class="harganormal">Rp12.100</p>
+          <h4 class="hargapromo">Rp9.900</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 cooking" href="https://bejojoyo.bukaolshop.site/produk/blue-band-margarine-serbaguna-200g-1324532">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/88619792.jpg">
+        <div class="card-body">
+        <h6>Blue Band</h6>
+        <p class="ellipsis">Margarine Serbaguna</p>
+        <p class="gramasi">200G</p> 
+          <p class="harganormal">Rp13.300</p>
+          <h4 class="hargapromo">Rp8.900</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 cooking" href="https://bejojoyo.bukaolshop.site/produk/pro-chris-keju-gold-160g-1312770">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/872566296h.jpg">
+        <div class="card-body">
+        <h6>Pro chis</h6>
+        <p class="ellipsis">keju gold</p>
+        <p class="gramasi">160g</p> 
+          <p class="harganormal">Rp15.700</p>
+          <h4 class="hargapromo">Rp11.900</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 cooking" href="https://bejojoyo.bukaolshop.site/produk/kapal-api-kopi-bubuk-special-20x6-5g-1739037">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/91066400.jpg">
+        <div class="card-body">
+        <h6>Kapal Api</h6>
+        <p class="ellipsis">Kopi Bubuk Special</p>
+        <p class="gramasi">20X6.5G</p> 
+          <p class="harganormal">Rp11.000</p>
+          <h4 class="hargapromo">Rp8.500</h4>  
+        </div>
+      </div>
+      </a>
+
+      <a class="alfa 2426 personal" href="https://bejojoyo.bukaolshop.site/produk/fair-lovely-multivitamin-cream-46g-1739053">
+      <div class="card">
+        <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/98395228p.jpg">
+        <div class="card-body">
+        <h6>Fair & Lovely</h6>
+        <p class="ellipsis">Multivitamin Cream</p>
+        <p class="gramasi">46g</p> 
+          <p class="harganormal">Rp37.300</p>
+          <h4 class="hargapromo">Rp27.900</h4>  
+        </div>
+      </div>
+      </a>
+
+
       <!-- indomaret -->
-      
+
       <!-- promo tanggal 22 - 28 februari 2022 -->
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/indomilk-susu-steril-honey-189ml-1712870">
+      <a class="idm 2228 beverage" href="https://bejojoyo.bukaolshop.site/produk/indomilk-susu-steril-honey-189ml-1712870">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/623561511h.jpg">
         <div class="card-body">
@@ -132,7 +301,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" id="1712871" href="https://bejojoyo.bukaolshop.site/produk/indomilk-susu-steril-plain-189ml-1712871">
+      <a class="idm 2228 beverage" id="1712871" href="https://bejojoyo.bukaolshop.site/produk/indomilk-susu-steril-plain-189ml-1712871">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/404525232j.jpg">
         <div class="card-body">
@@ -145,7 +314,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/wardah-perfect-bright-cooling-jelly-facial-foam-100ml-1734897">
+      <a class="idm 2228 personal" href="https://bejojoyo.bukaolshop.site/produk/wardah-perfect-bright-cooling-jelly-facial-foam-100ml-1734897">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/587858675f.jpg">
         <div class="card-body">
@@ -158,7 +327,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/clean-clear-foaming-facial-wash-100ml-1734903">
+      <a class="idm 2228 personal" href="https://bejojoyo.bukaolshop.site/produk/clean-clear-foaming-facial-wash-100ml-1734903">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/861145345n.jpg">
         <div class="card-body">
@@ -171,7 +340,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/clean-clear-foaming-facial-wash-50ml-1734906">
+      <a class="idm 2228 personal" href="https://bejojoyo.bukaolshop.site/produk/clean-clear-foaming-facial-wash-50ml-1734906">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/781534183r.jpg">
         <div class="card-body">
@@ -184,7 +353,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-for-men-cool-kick-freezy-green-50ml-1734914">
+      <a class="idm 2228 personal" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-for-men-cool-kick-freezy-green-50ml-1734914">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/489411598n.jpg">
         <div class="card-body">
@@ -197,7 +366,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-roll-on-invisible-fresh-men-black-white-50ml-1734919">
+      <a class="idm 2228 personal" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-roll-on-invisible-fresh-men-black-white-50ml-1734919">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/274841219d.jpg">
         <div class="card-body">
@@ -210,7 +379,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-roll-on-men-deep-50ml-1734925">
+      <a class="idm 2228 personal" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-roll-on-men-deep-50ml-1734925">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/751452066r.jpg">
         <div class="card-body">
@@ -223,7 +392,7 @@
       </div>
       </a>
 
-      <a class="idm 2228" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-roll-on-invisible-for-men-black-white-50ml-1734930">
+      <a class="idm 2228 personal" href="https://bejojoyo.bukaolshop.site/produk/nivea-deo-roll-on-invisible-for-men-black-white-50ml-1734930">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/96326319z.jpg">
         <div class="card-body">
@@ -238,14 +407,9 @@
 
       <!-- end promo tanggal 22 - 28 februari 2022 -->
 
-
-      
-
-      
-
       <!-- Lariso -->
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/indomie-mi-instan-goreng-ayam-geprek-85g-1330802">
+      <a class="larisso noodle" href="https://bejojoyo.bukaolshop.site/produk/indomie-mi-instan-goreng-ayam-geprek-85g-1330802">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/659960714a.jpg">
         <div class="card-body">
@@ -258,7 +422,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/indomie-mi-instan-goreng-plus-special-85g-1330868">
+      <a class="larisso noodle" href="https://bejojoyo.bukaolshop.site/produk/indomie-mi-instan-goreng-plus-special-85g-1330868">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/320857630f.jpg">
         <div class="card-body">
@@ -271,7 +435,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/roma-biscuit-kelapa-300g-1734933">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/roma-biscuit-kelapa-300g-1734933">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/598828311n.jpg">
         <div class="card-body">
@@ -284,7 +448,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/so-nice-sosis-rasa-sapi-ayam-25x19g-1734942">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/so-nice-sosis-rasa-sapi-ayam-25x19g-1734942">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/709512291z.jpg">
         <div class="card-body">
@@ -297,7 +461,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/top-coffee-kopi-susu-rencheng-12x31g-1734944">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/top-coffee-kopi-susu-rencheng-12x31g-1734944">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/894230824j.jpg">
         <div class="card-body">
@@ -310,7 +474,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/top-coffee-gula-aren-rencheng-12x22g-1734952">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/top-coffee-gula-aren-rencheng-12x22g-1734952">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/333687940u.jpg">
         <div class="card-body">
@@ -323,7 +487,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/top-kopi-murni-158g-1734954">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/top-kopi-murni-158g-1734954">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/419958406z.jpg">
         <div class="card-body">
@@ -336,7 +500,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/luwak-white-koffie-original-10x20g-1734961">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/luwak-white-koffie-original-10x20g-1734961">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/331391970u.jpg">
         <div class="card-body">
@@ -349,7 +513,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/kapal-api-mini-special-10x6-5g-1734975">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/kapal-api-mini-special-10x6-5g-1734975">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/96293428t.jpg">
         <div class="card-body">
@@ -362,7 +526,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/masako-ayam-renceng-10s-1333538">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/masako-ayam-renceng-10s-1333538">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/424126947d.jpg">
         <div class="card-body">
@@ -375,7 +539,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/masako-sapi-rencheng-10s-1333540">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/masako-sapi-rencheng-10s-1333540">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/806841349r.jpg">
         <div class="card-body">
@@ -388,7 +552,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/relaxa-permen-rasa-cherry-mint-50pcs-1720622">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/relaxa-permen-rasa-cherry-mint-50pcs-1720622">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/90179191.jpg">
         <div class="card-body">
@@ -401,7 +565,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/relaxa-permen-rasa-barley-mint-50pcs-1720618">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/relaxa-permen-rasa-barley-mint-50pcs-1720618">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/31017166.jpg">
         <div class="card-body">
@@ -414,7 +578,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/relaxa-orange-mint-125gr-1368103">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/relaxa-orange-mint-125gr-1368103">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/24622755.jpg">
         <div class="card-body">
@@ -427,7 +591,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/relaxa-permen-rasa-anggur-mint-50pcs-1365334">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/relaxa-permen-rasa-anggur-mint-50pcs-1365334">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/80025596.jpg">
         <div class="card-body">
@@ -440,7 +604,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/indomilk-sachet-putih-6-37g-1322096">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/indomilk-sachet-putih-6-37g-1322096">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/375642711l.jpg">
         <div class="card-body">
@@ -453,7 +617,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/indomilk-sachet-coklat-6-37g-1322098">
+      <a class="larisso cooking" href="https://bejojoyo.bukaolshop.site/produk/indomilk-sachet-coklat-6-37g-1322098">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/477549499q.jpg">
         <div class="card-body">
@@ -466,7 +630,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/nabati-wafer-coklat-46g-1333493">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/nabati-wafer-coklat-46g-1333493">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/2097306.jpg">
         <div class="card-body">
@@ -479,7 +643,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/nabati-wafer-keju-46g-1333499">
+      <a class="larisso snack" href="https://bejojoyo.bukaolshop.site/produk/nabati-wafer-keju-46g-1333499">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/90530378.jpg">
         <div class="card-body">
@@ -492,7 +656,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/sedaap-mie-instant-goreng-korean-spicy-87g-1337741">
+      <a class="larisso noodle" href="https://bejojoyo.bukaolshop.site/produk/sedaap-mie-instant-goreng-korean-spicy-87g-1337741">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/37253198i.jpg">
         <div class="card-body">
@@ -505,7 +669,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/sedaap-mie-instant-goreng-90g-1337831">
+      <a class="larisso noodle" href="https://bejojoyo.bukaolshop.site/produk/sedaap-mie-instant-goreng-90g-1337831">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/712039243z.jpg">
         <div class="card-body">
@@ -518,7 +682,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/sedaap-mie-instant-soto-75g-1337837">
+      <a class="larisso noodle" href="https://bejojoyo.bukaolshop.site/produk/sedaap-mie-instant-soto-75g-1337837">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/603659172o.jpg">
         <div class="card-body">
@@ -531,7 +695,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/javana-minuman-teh-melati-gula-batu-350ml-1702547">
+      <a class="larisso beverage" href="https://bejojoyo.bukaolshop.site/produk/javana-minuman-teh-melati-gula-batu-350ml-1702547">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/87410556.jpg">
         <div class="card-body">
@@ -544,7 +708,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/javana-minuman-teh-melati-350ml-1702552">
+      <a class="larisso beverage" href="https://bejojoyo.bukaolshop.site/produk/javana-minuman-teh-melati-350ml-1702552">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/8309702.jpg">
         <div class="card-body">
@@ -557,7 +721,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/floridina-juice-pulp-coco-bit-350ml-1702535">
+      <a class="larisso beverage" href="https://bejojoyo.bukaolshop.site/produk/floridina-juice-pulp-coco-bit-350ml-1702535">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/71486963.jpg">
         <div class="card-body">
@@ -570,7 +734,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/floridina-juice-pulp-orange-350ml-1702542">
+      <a class="larisso beverage" href="https://bejojoyo.bukaolshop.site/produk/floridina-juice-pulp-orange-350ml-1702542">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/1208493.jpg">
         <div class="card-body">
@@ -583,7 +747,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/milku-susu-uht-cokelat-premium-200ml-1702514">
+      <a class="larisso beverage" href="https://bejojoyo.bukaolshop.site/produk/milku-susu-uht-cokelat-premium-200ml-1702514">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/91109047.jpg">
         <div class="card-body">
@@ -596,7 +760,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/milku-susu-uht-stroberi-200ml-1702517">
+      <a class="larisso beverage" href="https://bejojoyo.bukaolshop.site/produk/milku-susu-uht-stroberi-200ml-1702517">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/35961528.jpg">
         <div class="card-body">
@@ -609,7 +773,7 @@
       </div>
       </a>
 
-      <a class="larisso" href="https://bejojoyo.bukaolshop.site/produk/isoplus-minuman-isotonik-350ml-1702512">
+      <a class="larisso beverage" href="https://bejojoyo.bukaolshop.site/produk/isoplus-minuman-isotonik-350ml-1702512">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/58294333.jpg">
         <div class="card-body">
@@ -625,7 +789,7 @@
       <!-- end larisso -->
       
       <!-- Bejo -->
-      <a class="bejo" id="1695229" href="https://bejojoyo.bukaolshop.site/produk/nuvo-sabun-kesehatan-family-cool-3x76g-1695229">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/nuvo-sabun-kesehatan-family-cool-3x76g-1695229">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/38766328.jpg">
         <div class="card-body">
@@ -638,7 +802,7 @@
       </div>
       </a>
 
-      <a class="bejo" id="1713217" href="https://bejojoyo.bukaolshop.site/produk/rexona-men-deodorant-roll-on-ultra-recharge-45ml-1713217">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/rexona-men-deodorant-roll-on-ultra-recharge-45ml-1713217">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/48995693.jpg">
         <div class="card-body">
@@ -651,7 +815,7 @@
       </div>
       </a>
 
-      <a class="bejo" id="1693119" href="https://bejojoyo.bukaolshop.site/produk/rexona-deodorant-roll-on-women-power-dry-50ml-1693119">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/rexona-deodorant-roll-on-women-power-dry-50ml-1693119">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/53735319.jpg">
         <div class="card-body">
@@ -664,7 +828,7 @@
       </div>
       </a>
 
-      <a class="bejo" id="1693112" href="https://bejojoyo.bukaolshop.site/produk/rexona-deodorant-roll-on-women-shower-clean-50ml-1693112">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/rexona-deodorant-roll-on-women-shower-clean-50ml-1693112">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/20920808.jpg">
         <div class="card-body">
@@ -677,7 +841,7 @@
       </div>
       </a>
 
-      <a class="bejo" id="1693105" href="https://bejojoyo.bukaolshop.site/produk/rexona-deodorant-free-spirit-50ml-1693105">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/rexona-deodorant-free-spirit-50ml-1693105">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/26770691.jpg">
         <div class="card-body">
@@ -690,7 +854,7 @@
       </div>
       </a>
 
-      <a class="bejo" id="1692534" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-shampoo-color-1-0-hitam-alami-1692534">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-shampoo-color-1-0-hitam-alami-1692534">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/69150443.jpg">
         <div class="card-body">
@@ -703,7 +867,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-shampoo-color-3-0-coklat-kehitaman-1692533">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-shampoo-color-3-0-coklat-kehitaman-1692533">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/33995110.jpg">
         <div class="card-body">
@@ -716,7 +880,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/fair-lovely-multivitamin-cream-23g-1692420">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/fair-lovely-multivitamin-cream-23g-1692420">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/22990557.jpg">
         <div class="card-body">
@@ -729,7 +893,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/garnier-bright-complete-vit-c-facial-wash-scrub-100ml-1688500">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/garnier-bright-complete-vit-c-facial-wash-scrub-100ml-1688500">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/810260482e.jpg">
         <div class="card-body">
@@ -742,7 +906,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/garnier-bright-complete-vit-c-facial-wash-100ml-1688508">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/garnier-bright-complete-vit-c-facial-wash-100ml-1688508">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/44804818w.jpg">
         <div class="card-body">
@@ -755,7 +919,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-acno-fight-foam-6-in-1-anti-acne-100ml-1688517">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-acno-fight-foam-6-in-1-anti-acne-100ml-1688517">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/253647545n.jpg">
         <div class="card-body">
@@ -768,7 +932,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-acno-fight-wasabi-foam-100ml-1688519">
+      <a class="bejo personal" href="https://bejojoyo.bukaolshop.site/produk/garnier-men-acno-fight-wasabi-foam-100ml-1688519">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/585231977r.jpg">
         <div class="card-body">
@@ -781,7 +945,7 @@
       </div>
       </a>
       
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/bear-brand-susu-steril-189ml-1359360">
+      <a class="bejo beverage" href="https://bejojoyo.bukaolshop.site/produk/bear-brand-susu-steril-189ml-1359360">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/55798103.jpg">
         <div class="card-body">
@@ -794,7 +958,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/sprite-soft-drink-1500ml-1312787">
+      <a class="bejo beverage" href="https://bejojoyo.bukaolshop.site/produk/sprite-soft-drink-1500ml-1312787">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/946525196y.jpg">
         <div class="card-body">
@@ -807,20 +971,20 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/bango-kecap-manis-550ml-1333507">
+      <a class="bejo cooking" href="https://bejojoyo.bukaolshop.site/produk/bango-kecap-manis-550ml-1333507">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/55004112.jpg">
         <div class="card-body">
         <h6>Bango</h6>
         <p class="ellipsis">kecap manis</p>
         <p class="gramasi">550ml</p> 
-          <p class="harganormal">Rp25.000</p>
-          <h4 class="hargapromo">Rp21.500</h4>  
+          <p class="harganormal">Rp25.200</p>
+          <h4 class="hargapromo">Rp20.500</h4>  
         </div>
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/mama-lemon-jeruk-nipis-680ml-1312775">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/mama-lemon-jeruk-nipis-680ml-1312775">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/811744989z.jpg">
         <div class="card-body">
@@ -828,12 +992,12 @@
         <p class="ellipsis">Pencuci piring Jeruk nipis</p>
         <p class="gramasi">680ml</p> 
           <p class="harganormal">Rp13.700</p>
-          <h4 class="hargapromo">Rp10.900</h4>  
+          <h4 class="hargapromo">Rp9.900</h4>  
         </div>
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/bango-kecap-manis-19-ml-144-sachet-karton-1684871">
+      <a class="bejo cooking" href="https://bejojoyo.bukaolshop.site/produk/bango-kecap-manis-19-ml-144-sachet-karton-1684871">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/94970786.jpg">
         <div class="card-body">
@@ -846,7 +1010,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/hit-insektisida-lily-blossom-200ml-1312794">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/hit-insektisida-lily-blossom-200ml-1312794">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/697871679p.jpg">
         <div class="card-body">
@@ -859,7 +1023,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-pakaian-refill-blue-800ml-1379182">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-pakaian-refill-blue-800ml-1379182">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/22668698.jpg">
         <div class="card-body">
@@ -872,7 +1036,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-pakaian-refill-red-800ml-1379167">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-pakaian-refill-red-800ml-1379167">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/43157956.jpg">
         <div class="card-body">
@@ -885,7 +1049,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-violet-pouch-800ml-1365347">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-violet-pouch-800ml-1365347">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/29281187s.jpg">
         <div class="card-body">
@@ -898,7 +1062,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-pakaian-hijab-refill-green-800ml-1379160">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/so-klin-pewangi-pakaian-hijab-refill-green-800ml-1379160">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/92536026.jpg">
         <div class="card-body">
@@ -911,7 +1075,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/sunlight-jeruk-nipis-460ml-1305702">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/sunlight-jeruk-nipis-460ml-1305702">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/50115978h.jpg">
         <div class="card-body">
@@ -924,7 +1088,7 @@
       </div>
       </a>
 
-      <a class="bejo" href="https://bejojoyo.bukaolshop.site/produk/sunlight-jeruk-nipis-755ml-1354423">
+      <a class="bejo homecare" href="https://bejojoyo.bukaolshop.site/produk/sunlight-jeruk-nipis-755ml-1354423">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/65466073.jpg">
         <div class="card-body">
@@ -937,7 +1101,7 @@
       </div>
       </a>
 
-      <a class="bejo" id="1688553" href="https://bejojoyo.bukaolshop.site/produk/ponds-pembersih-wajah-white-beauty-100g-1688553">
+      <a class="bejo personal" id="1688553" href="https://bejojoyo.bukaolshop.site/produk/ponds-pembersih-wajah-white-beauty-100g-1688553">
       <div class="card">
         <img src="https://bukaolshop.s3-id-jkt-1.kilatstorage.id/36432/88433387k.jpg">
         <div class="card-body">
@@ -949,27 +1113,516 @@
         </div>
       </div>
       </a>
-      <!-- end bejo -->
-
-      
+      <!-- end bejo -->      
 
     </div>
-
-
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
     <script type="text/javascript">
 
+      function semua() {
+        let snack = document.getElementsByClassName('snack');
+        let beverage = document.getElementsByClassName('beverage');
+        let personal = document.getElementsByClassName('personal');
+        let cooking = document.getElementsByClassName('cooking');
+        let homecare = document.getElementsByClassName('homecare');
+        let noodle = document.getElementsByClassName('noodle');
+        let snackCounter = 0;
+        let beverageCounter = 0;
+        let personalCounter = 0;
+        let cookingCounter = 0;
+        let homecareCounter = 0;
+        let noodleCounter = 0;
+
+      for (let i = 0; i < snack.length; i++) {
+      if (snackCounter >= 50) {
+        break;
+      }
+      snack[i].style.display = "block";
+      snackCounter++;
+      }
+
+      for (let i = 0; i < beverage.length; i++) {
+      if (beverageCounter >= 50) {
+        break;
+      }
+      beverage[i].style.display = "block";
+      beverageCounter++;
+      }
+
+      for (let i = 0; i < personal.length; i++) {
+      if (personalCounter >= 50) {
+        break;
+      }
+      personal[i].style.display = "block";
+      personalCounter++;
+      }
+
+      for (let i = 0; i < cooking.length; i++) {
+      if (cookingCounter >= 50) {
+        break;
+      }
+      cooking[i].style.display = "block";
+      cookingCounter++;
+      }
+
+      for (let i = 0; i < homecare.length; i++) {
+      if (homecareCounter >= 50) {
+        break;
+      }
+      homecare[i].style.display = "block";
+      homecareCounter++;
+      }
+
+      for (let i = 0; i < noodle.length; i++) {
+      if (noodleCounter >= 50) {
+        break;
+      }
+      noodle[i].style.display = "block";
+      noodleCounter++;
+      }
+      }
+
+      function snack() {
+        let snack = document.getElementsByClassName('snack');
+        let beverage = document.getElementsByClassName('beverage');
+        let personal = document.getElementsByClassName('personal');
+        let cooking = document.getElementsByClassName('cooking');
+        let homecare = document.getElementsByClassName('homecare');
+        let noodle = document.getElementsByClassName('noodle');
+        let snackCounter = 0;
+        let beverageCounter = 0;
+        let personalCounter = 0;
+        let cookingCounter = 0;
+        let homecareCounter = 0;
+        let noodleCounter = 0;
+
+      for (let i = 0; i < snack.length; i++) {
+      if (snackCounter >= 50) {
+        break;
+      }
+      snack[i].style.display = "block";
+      snackCounter++;
+      }
+
+      for (let i = 0; i < beverage.length; i++) {
+      if (beverageCounter >= 50) {
+        break;
+      }
+      beverage[i].style.display = "none";
+      beverageCounter++;
+      }
+
+      for (let i = 0; i < personal.length; i++) {
+      if (personalCounter >= 50) {
+        break;
+      }
+      personal[i].style.display = "none";
+      personalCounter++;
+      }
+
+      for (let i = 0; i < cooking.length; i++) {
+      if (cookingCounter >= 50) {
+        break;
+      }
+      cooking[i].style.display = "none";
+      cookingCounter++;
+      }
+
+      for (let i = 0; i < homecare.length; i++) {
+      if (homecareCounter >= 50) {
+        break;
+      }
+      homecare[i].style.display = "none";
+      homecareCounter++;
+      }
+
+      for (let i = 0; i < noodle.length; i++) {
+      if (noodleCounter >= 50) {
+        break;
+      }
+      noodle[i].style.display = "none";
+      noodleCounter++;
+      }
+
+      }
+
+      function beverage() {
+        let snack = document.getElementsByClassName('snack');
+        let beverage = document.getElementsByClassName('beverage');
+        let personal = document.getElementsByClassName('personal');
+        let cooking = document.getElementsByClassName('cooking');
+        let homecare = document.getElementsByClassName('homecare');
+        let noodle = document.getElementsByClassName('noodle');
+        let snackCounter = 0;
+        let beverageCounter = 0;
+        let personalCounter = 0;
+        let cookingCounter = 0;
+        let homecareCounter = 0;
+        let noodleCounter = 0;
+
+      for (let i = 0; i < snack.length; i++) {
+      if (snackCounter >= 50) {
+        break;
+      }
+      snack[i].style.display = "none";
+      snackCounter++;
+      }
+
+      for (let i = 0; i < beverage.length; i++) {
+      if (beverageCounter >= 50) {
+        break;
+      }
+      beverage[i].style.display = "block";
+      beverageCounter++;
+      }
+
+      for (let i = 0; i < personal.length; i++) {
+      if (personalCounter >= 50) {
+        break;
+      }
+      personal[i].style.display = "none";
+      personalCounter++;
+      }
+
+      for (let i = 0; i < cooking.length; i++) {
+      if (cookingCounter >= 50) {
+        break;
+      }
+      cooking[i].style.display = "none";
+      cookingCounter++;
+      }
+
+      for (let i = 0; i < homecare.length; i++) {
+      if (homecareCounter >= 50) {
+        break;
+      }
+      homecare[i].style.display = "none";
+      homecareCounter++;
+      }
+
+      for (let i = 0; i < noodle.length; i++) {
+      if (noodleCounter >= 50) {
+        break;
+      }
+      noodle[i].style.display = "none";
+      noodleCounter++;
+      }
+      }
+
+      function personal() {
+        let snack = document.getElementsByClassName('snack');
+        let beverage = document.getElementsByClassName('beverage');
+        let personal = document.getElementsByClassName('personal');
+        let cooking = document.getElementsByClassName('cooking');
+        let homecare = document.getElementsByClassName('homecare');
+        let noodle = document.getElementsByClassName('noodle');
+        let snackCounter = 0;
+        let beverageCounter = 0;
+        let personalCounter = 0;
+        let cookingCounter = 0;
+        let homecareCounter = 0;
+        let noodleCounter = 0;
+
+      for (let i = 0; i < snack.length; i++) {
+      if (snackCounter >= 50) {
+        break;
+      }
+      snack[i].style.display = "none";
+      snackCounter++;
+      }
+
+      for (let i = 0; i < beverage.length; i++) {
+      if (beverageCounter >= 50) {
+        break;
+      }
+      beverage[i].style.display = "none";
+      beverageCounter++;
+      }
+
+      for (let i = 0; i < personal.length; i++) {
+      if (personalCounter >= 50) {
+        break;
+      }
+      personal[i].style.display = "block";
+      personalCounter++;
+      }
+
+      for (let i = 0; i < cooking.length; i++) {
+      if (cookingCounter >= 50) {
+        break;
+      }
+      cooking[i].style.display = "none";
+      cookingCounter++;
+      }
+
+      for (let i = 0; i < homecare.length; i++) {
+      if (homecareCounter >= 50) {
+        break;
+      }
+      homecare[i].style.display = "none";
+      homecareCounter++;
+      }
+
+      for (let i = 0; i < noodle.length; i++) {
+      if (noodleCounter >= 50) {
+        break;
+      }
+      noodle[i].style.display = "none";
+      noodleCounter++;
+      }
+      }
+
+      function cooking() {
+        let snack = document.getElementsByClassName('snack');
+        let beverage = document.getElementsByClassName('beverage');
+        let personal = document.getElementsByClassName('personal');
+        let cooking = document.getElementsByClassName('cooking');
+        let homecare = document.getElementsByClassName('homecare');
+        let noodle = document.getElementsByClassName('noodle');
+        let snackCounter = 0;
+        let beverageCounter = 0;
+        let personalCounter = 0;
+        let cookingCounter = 0;
+        let homecareCounter = 0;
+        let noodleCounter = 0;
+
+      for (let i = 0; i < snack.length; i++) {
+      if (snackCounter >= 50) {
+        break;
+      }
+      snack[i].style.display = "none";
+      snackCounter++;
+      }
+
+      for (let i = 0; i < beverage.length; i++) {
+      if (beverageCounter >= 50) {
+        break;
+      }
+      beverage[i].style.display = "none";
+      beverageCounter++;
+      }
+
+      for (let i = 0; i < personal.length; i++) {
+      if (personalCounter >= 50) {
+        break;
+      }
+      personal[i].style.display = "none";
+      personalCounter++;
+      }
+
+      for (let i = 0; i < cooking.length; i++) {
+      if (cookingCounter >= 50) {
+        break;
+      }
+      cooking[i].style.display = "block";
+      cookingCounter++;
+      }
+
+      for (let i = 0; i < homecare.length; i++) {
+      if (homecareCounter >= 50) {
+        break;
+      }
+      homecare[i].style.display = "none";
+      homecareCounter++;
+      }
+
+      for (let i = 0; i < noodle.length; i++) {
+      if (noodleCounter >= 50) {
+        break;
+      }
+      noodle[i].style.display = "none";
+      noodleCounter++;
+      }
+      }
+
+      function homecare() {
+        let snack = document.getElementsByClassName('snack');
+        let beverage = document.getElementsByClassName('beverage');
+        let personal = document.getElementsByClassName('personal');
+        let cooking = document.getElementsByClassName('cooking');
+        let homecare = document.getElementsByClassName('homecare');
+        let noodle = document.getElementsByClassName('noodle');
+        let snackCounter = 0;
+        let beverageCounter = 0;
+        let personalCounter = 0;
+        let cookingCounter = 0;
+        let homecareCounter = 0;
+        let noodleCounter = 0;
+
+      for (let i = 0; i < snack.length; i++) {
+      if (snackCounter >= 50) {
+        break;
+      }
+      snack[i].style.display = "none";
+      snackCounter++;
+      }
+
+      for (let i = 0; i < beverage.length; i++) {
+      if (beverageCounter >= 50) {
+        break;
+      }
+      beverage[i].style.display = "none";
+      beverageCounter++;
+      }
+
+      for (let i = 0; i < personal.length; i++) {
+      if (personalCounter >= 50) {
+        break;
+      }
+      personal[i].style.display = "none";
+      personalCounter++;
+      }
+
+      for (let i = 0; i < cooking.length; i++) {
+      if (cookingCounter >= 50) {
+        break;
+      }
+      cooking[i].style.display = "none";
+      cookingCounter++;
+      }
+
+      for (let i = 0; i < homecare.length; i++) {
+      if (homecareCounter >= 50) {
+        break;
+      }
+      homecare[i].style.display = "block";
+      homecareCounter++;
+      }
+
+      for (let i = 0; i < noodle.length; i++) {
+      if (noodleCounter >= 50) {
+        break;
+      }
+      noodle[i].style.display = "none";
+      noodleCounter++;
+      }
+      }
+
+      function noodle() {
+        let snack = document.getElementsByClassName('snack');
+        let beverage = document.getElementsByClassName('beverage');
+        let personal = document.getElementsByClassName('personal');
+        let cooking = document.getElementsByClassName('cooking');
+        let homecare = document.getElementsByClassName('homecare');
+        let noodle = document.getElementsByClassName('noodle');
+        let snackCounter = 0;
+        let beverageCounter = 0;
+        let personalCounter = 0;
+        let cookingCounter = 0;
+        let homecareCounter = 0;
+        let noodleCounter = 0;
+
+      for (let i = 0; i < snack.length; i++) {
+      if (snackCounter >= 50) {
+        break;
+      }
+      snack[i].style.display = "none";
+      snackCounter++;
+      }
+
+      for (let i = 0; i < beverage.length; i++) {
+      if (beverageCounter >= 50) {
+        break;
+      }
+      beverage[i].style.display = "none";
+      beverageCounter++;
+      }
+
+      for (let i = 0; i < personal.length; i++) {
+      if (personalCounter >= 50) {
+        break;
+      }
+      personal[i].style.display = "none";
+      personalCounter++;
+      }
+
+      for (let i = 0; i < cooking.length; i++) {
+      if (cookingCounter >= 50) {
+        break;
+      }
+      cooking[i].style.display = "none";
+      cookingCounter++;
+      }
+
+      for (let i = 0; i < homecare.length; i++) {
+      if (homecareCounter >= 50) {
+        break;
+      }
+      homecare[i].style.display = "none";
+      homecareCounter++;
+      }
+
+      for (let i = 0; i < noodle.length; i++) {
+      if (noodleCounter >= 50) {
+        break;
+      }
+      noodle[i].style.display = "block";
+      noodleCounter++;
+      }
+      }
+
       let tgl = new Date().getDate();
       let bulan = new Date().getMonth();
       
+      // bejo
       let bejoClass = document.getElementsByClassName("bejo");
-      let larisoClass = document.getElementsByClassName("larisso");
       let bejoCounter = 0;
+      for (let i = 0; i < bejoClass.length; i++) {
+      if (bejoCounter >= 25) {
+        break;
+      }
+      bejoClass[i].style.display = "block";
+      bejoCounter++;
+      }
+      // end bejo
+      
+
+      //pengkondisian lariso
+      let larisoClass = document.getElementsByClassName("larisso");     
       let larisoCounter = 0;
+      if (tgl <=28 && bulan == 1) {
+        for (let i = 0; i < larisoClass.length; i++) {
+        if (larisoCounter >= 50) {
+          break;
+        }
+        larisoClass[i].style.display = "block";
+        larisoCounter++;
+      }
+      }else if (bulan == 2) {
+          for (let i = 0; i < larisoClass.length; i++) {
+        if (larisoCounter >= 50) {
+          break;
+        }
+        larisoClass[i].style.display = "none";
+        larisoCounter++;
+      }
+      }
+      //end pengkondisian lariso
+
+      // periode 22 - 28 februari 2023
+      let p2426 = document.getElementsByClassName('2426');
+      let p2426Counter = 0;
+      if (tgl <=26 && bulan == 1) {
+        for (let i = 0; i < p2426.length; i++) {
+        if (p2426Counter >= 50) {
+          break;
+        }
+        p2426[i].style.display = "block";
+        p2426Counter++;
+      }
+      }else if (tgl <=27 && bulan == 1) {
+          for (let i = 0; i < p2426.length; i++) {
+        if (p2426Counter >= 50) {
+          break;
+        }
+        p2426[i].style.display = "none";
+        p2426Counter++;
+      }
+      }
+      // end periode 22 - 28 februari 2023
 
       // periode 22 - 28 februari 2023
       let idm2228 = document.getElementsByClassName('2228');
@@ -993,34 +1646,6 @@
       }
       // end periode 22 - 28 februari 2023
 
-
-for (let i = 0; i < bejoClass.length; i++) {
-  if (bejoCounter >= 25) {
-    break;
-  }
-  bejoClass[i].style.display = "block";
-  bejoCounter++;
-}
-
-//pengkondisian lariso
-if (tgl <=28 && bulan == 1) {
-  for (let i = 0; i < larisoClass.length; i++) {
-  if (larisoCounter >= 50) {
-    break;
-  }
-  larisoClass[i].style.display = "block";
-  larisoCounter++;
-}
-}else if (bulan == 2) {
-    for (let i = 0; i < larisoClass.length; i++) {
-  if (larisoCounter >= 50) {
-    break;
-  }
-  larisoClass[i].style.display = "none";
-  larisoCounter++;
-}
-}
-//end pengkondisian lariso
 
 
     </script>
