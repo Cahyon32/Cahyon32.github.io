@@ -29,12 +29,14 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding-top: 12%;
+      padding-top: 15%;
     }
     .boxproduk a {
      width: 48%;
      text-decoration: none;
      margin-top: 10px;
+     animation: fadeInUp;
+     animation-duration: 1s;
     }
      .card {
       padding: 10px 3px 0px 3px;
@@ -123,11 +125,16 @@
 
       <div class="container header" style="display: flex; justify-content: space-between; align-items: center;">
         <img src="https://i.ibb.co/vJ8SdVC/Desain-tanpa-judul-3-removebg-preview.png" alt="Desain-tanpa-judul-3-removebg-preview" border="0" style="width: 25%; margin-left: 10px;">
+        <div class="cart" style="position: relative;">
         <a href="https://bejojoyo.bukaolshop.site/cart/">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#1db9ab" class="bi bi-basket-fill" viewBox="0 0 16 16">
           <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717L5.07 1.243zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3z"/>
           </svg>
         </a>
+        <div style="position: absolute; top: 0; right: 0; background-color: red; padding: 0px 2px 0px 2px; font-size: 8px; border-radius: 2px; border: 1px solid #d9d9d9;">
+          {{total_cart}}
+        </div>
+        </div>
       </div>
       
     </div>
