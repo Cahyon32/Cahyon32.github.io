@@ -22,27 +22,21 @@
       padding-bottom: 20px;
     }
     /*navbar*/
-   .navbar {
-     background-color: #eff0f2;
-     padding: 8px 10px 8px 10px;
-     justify-content: flex-end;
-   }
-   .header {
-    background-color: #eff0f2;
-    padding-bottom: 10px;
-   }
+   
 
    /*end navbar*/
     .boxproduk {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding-top: 40%;
+      padding-top: 15%;
     }
     .boxproduk a {
      width: 48%;
      text-decoration: none;
      margin-top: 10px;
+     animation: fadeInUp;
+     animation-duration: 1s;
     }
      .card {
       padding: 10px 3px 0px 3px;
@@ -96,54 +90,54 @@
       5px; color: #fff;
       font-family: 'League Spartan', sans-serif;
      }
+     .dropdown li {
+      border-radius: 5px;
+      padding: 1px 2px 1px 5px;
+     }
+     .dropdown li:hover {
+      background-color: #1db9ab;
+     }
 
    </style>
 
   </head>
   <body>
 
-    <div class="container-fluid header fixed-top" style="width: 100%;">
-      <img src="https://i.ibb.co/crkSdDb/Desain-tanpa-judul-2-removebg-preview.png" alt="..." width="60%">
-      <a href="https://bejojoyo.bukaolshop.site/cart/" class="basket mt-2 p-1 bg-black bg-gradient text-white rounded" style="display: flex; align-items: center;
-  justify-content: center; text-decoration: none;">
-  <img src="https://i.ibb.co/p6qW1Zk/bag.png" alt="bag" style="width: 5vmin;">
-  <div style="font-size: 3vmin; font-family: 'Poppins',sans-serif;">({{total_cart}})Item</div>
-</a>
-      <nav class="navbar mt-2 p-1 navbar-expand-lg rounded bg-gradient" style="background-color: #1db9ab; font-family: 'League Spartan', sans-serif;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Kategori</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a id="snack" onclick="snack()" class="nav-link" aria-current="page">Snack & Candy</a>
-        </li>
-        <li class="nav-item">
-          <a id="beverage" onclick="beverage()" class="nav-link">Beverage</a>
-        </li>
-        <li class="nav-item">
-          <a id="personal" onclick="personal()" class="nav-link">Personal Care</a>
-        </li>
-        <li class="nav-item">
-          <a id="cooking" onclick="cooking()" class="nav-link">Cooking Fair</a>
-        </li>
-        <li class="nav-item">
-          <a id="Homecare" onclick="homecare()" class="nav-link">Homecare</a>
-        </li>
-        <li class="nav-item">
-          <a id="noodle" onclick="noodle()" class="nav-link">Mie Instant</a>
-        </li>
-        <li class="nav-item">
-          <a id="lebaran" onclick="semua()" class="nav-link">Semua Produk</a>
-        </li>
+    <div class="container-fluid p-2 fixed-top bg-gradient" style="display: flex; background-color: #d9d9d9;">
+      <div class="kategori">
+        <div class="dropdown">
+      <button class="btn btn-warning" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+             </svg>
+      </button>
+      <ul class="dropdown-menu p-2 mt-5 animate__animated animate__slideInLeft bg-warning" style="line-height: 2;">
+        <li id="snack" onclick="snack()" >Snack & Candy</li>
+        <li id="beverage" onclick="beverage()">Berverage</li>
+        <li id="cooking" onclick="cooking()">Cooking Fair</li>
+        <li id="noodle" onclick="noodle()">Mie Instang</li>
+        <li id="personal" onclick="personal()">Personal Care</li>
+        <li id="Homecare" onclick="homecare()">Homecare</li>
+        <li id="lebaran" onclick="semua()">Semua produk</li>
       </ul>
+      </div>
     </div>
-  </div>
-</nav>
+
+      <div class="container header" style="display: flex; justify-content: space-between; align-items: center;">
+        <img src="https://i.ibb.co/vJ8SdVC/Desain-tanpa-judul-3-removebg-preview.png" alt="Desain-tanpa-judul-3-removebg-preview" border="0" style="width: 25%; margin-left: 10px;">
+        <a href="https://bejojoyo.bukaolshop.site/cart/">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#1db9ab" class="bi bi-basket-fill" viewBox="0 0 16 16">
+          <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717L5.07 1.243zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3z"/>
+          </svg>
+        </a>
+      </div>
+      
     </div>
+
+    
+    
+    
+
    
 
    <!-- List produk -->
